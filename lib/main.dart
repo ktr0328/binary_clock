@@ -1,7 +1,18 @@
+import 'dart:io';
+
 import 'package:binary_clock/widgets/TickerBuilder.dart';
 import 'package:flutter/material.dart';
+import 'package:window_size/window_size.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+    setWindowFrame(const Rect.fromLTWH(200, 100, 250, 250));
+    setWindowMinSize(const Size(200, 200));
+    setWindowMaxSize(Size.infinite);
+  }
+
   runApp(const MyApp());
 }
 
