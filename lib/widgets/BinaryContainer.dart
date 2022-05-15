@@ -21,7 +21,7 @@ class BinaryContainer extends StatelessWidget {
       children: [
         for (var s in timeFlag) ...[
           Center(
-            child: BinaryBlock(flag: s == '1'),
+            child: BinaryBlock(flag: s == '0'),
           )
         ]
       ],
