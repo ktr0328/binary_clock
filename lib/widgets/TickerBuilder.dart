@@ -17,7 +17,7 @@ class _TickerBuilderState extends State<TickerBuilder>
   late final Ticker _ticker;
   late DateTime _time;
 
-  final double fps = 30;
+  final double fps = 3;
 
   Duration lastTick = const Duration(milliseconds: 0);
   double tmpElapsedTick = 0;
